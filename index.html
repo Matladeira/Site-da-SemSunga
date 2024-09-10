@@ -1,0 +1,251 @@
+<html><head><base href="https://www.samsung.com/br/smartphones/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smartphones | Samsung Brasil</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'SamsungOne', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+  }
+  .header {
+    background-color: #fff;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .logo {
+    width: 120px;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+  }
+  .nav-links li {
+    margin: 0 15px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  .hero {
+    background-image: url('https://images.samsung.com/is/image/samsung/assets/br/2302/pcd/smartphones/Galaxy-S23-Ultra_KV_Product_KV_PC.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin-top: 80px;
+  }
+  .hero-content {
+    color: #fff;
+    max-width: 500px;
+  }
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    background-color: #fff;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px;
+    background-color: #fff;
+  }
+  .product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-10px);
+  }
+  .product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .product-info {
+    padding: 20px;
+  }
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .product-price {
+    font-size: 16px;
+    color: #666;
+  }
+  .filters {
+    background-color: #fff;
+    padding: 20px 50px;
+    margin-top: 20px;
+  }
+  .filter-btn {
+    background-color: #f4f4f4;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background-color: #000;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <img src="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/images/gnb-desktop-120x32.png" alt="Logo da Samsung" class="logo">
+      <ul class="nav-links">
+        <li><a href="https://www.samsung.com/br/smartphones/">Smartphones</a></li>
+        <li><a href="https://www.samsung.com/br/tablets/">Tablets</a></li>
+        <li><a href="https://www.samsung.com/br/watches/">Galaxy Watch</a></li>
+        <li><a href="https://www.samsung.com/br/audio-sound/">Audio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Smartphones Galaxy</h1>
+        <p>Descubra a nova geração de smartphones Samsung Galaxy.</p>
+        <a href="#products" class="btn">Ver todos</a>
+      </div>
+    </section>
+
+    <section class="filters">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="galaxy-s">Galaxy S</button>
+      <button class="filter-btn" data-filter="galaxy-a">Galaxy A</button>
+      <button class="filter-btn" data-filter="galaxy-m">Galaxy M</button>
+    </section>
+
+    <section id="products" class="product-grid">
+      <div class="product-card" data-category="galaxy-s">
+        <img src="https://images.samsung.com/is/image/samsung/assets/br/2302/pcd/smartphones/Galaxy-S23-Ultra_ProductKV_MO_v2.jpg" alt="Galaxy S23 Ultra" class="product-image">
+        <div class="product-info">
+          <div class="product-name">Galaxy S23 Ultra</div>
+          <div class="product-price">A partir de R$ 7.499</div>
+        </div>
+      </div>
+      <div class="product-card" data-category="galaxy-s">
+        <img src="https://images.samsung.com/is/image/samsung/assets/br/2302/pcd/smartphones/Galaxy-S23Plus_ProductKV_MO_v2.jpg" alt="Galaxy S23+" class="product-image">
+        <div class="product-info">
+          <div class="product-name">Galaxy S23+</div>
+          <div class="product-price">A partir de R$ 6.299</div>
+        </div>
+      </div>
+      <div class="product-card" data-category="galaxy-a">
+        <img src="https://images.samsung.com/is/image/samsung/assets/br/2302/pcd/smartphones/Galaxy-A54-5G_ProductKV_MO.jpg" alt="Galaxy A54 5G" class="product-image">
+        <div class="product-info">
+          <div class="product-name">Galaxy A54 5G</div>
+          <div class="product-price">A partir de R$ 2.699</div>
+        </div>
+      </div>
+      <div class="product-card" data-category="galaxy-m">
+        <img src="https://images.samsung.com/is/image/samsung/assets/br/2302/pcd/smartphones/Galaxy-M54-5G_ProductKV_MO.jpg" alt="Galaxy M54 5G" class="product-image">
+        <div class="product-info">
+          <div class="product-name">Galaxy M54 5G</div>
+          <div class="product-price">A partir de R$ 2.299</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Animação para o conteúdo do hero
+    const heroContent = document.querySelector('.hero-content');
+    heroContent.style.opacity = '0';
+    heroContent.style.transform = 'translateY(20px)';
+    heroContent.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        heroContent.style.opacity = '1';
+        heroContent.style.transform = 'translateY(0)';
+      }, 300);
+    });
+
+    // Filtro de produtos
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        productCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Animação para os cards de produto
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    productCards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(50px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
